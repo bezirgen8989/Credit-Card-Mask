@@ -1,0 +1,8 @@
+#creditCardInput[type='number'] {
+    -moz-appearance:textfield;
+}
+
+#creditCardInput::-webkit-outer-spin-button,
+#creditCardInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
