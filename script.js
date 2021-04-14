@@ -1,11 +1,11 @@
 let creditCardValue = document.getElementById('creditCardInput');
 
 
-function maskify(text) {
-    if (text.length > 4) {
+function hideCreditCardVal(value) {
+    if (value.length > 4) {
         let result = '';
-        return text.split('').reduce((acc, cur, i) => {
-            if (text.length - i > 4) {
+        return value.split('').reduce((acc, cur, i) => {
+            if (value.length - i > 4) {
                 result += '#';
             } else {
                 result += cur;
@@ -14,10 +14,10 @@ function maskify(text) {
             return result;
         }, '');
     } else {
-        return text;
+        return value;
     }
 }
 
 document.getElementById('submitBtn').addEventListener('click', ()=>{
-    document.getElementById('creditCard').innerHTML= maskify(creditCardValue.value)
+    document.getElementById('creditCard').innerHTML= hideCreditCardVal(creditCardValue.value)
 })
